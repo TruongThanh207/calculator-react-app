@@ -1,38 +1,206 @@
-.App {
-  text-align: center;
-}
 
-.App-logo {
-  height: 40vmin;
-  pointer-events: none;
+*{
+  margin: 0;
+  padding: 0;
 }
+.container{
+  margin: auto;
+  width: 25%;
+  padding-top: 40px;
+}
+body {
+  height: 95vh;
+  width: 95vw;
+  background-color:#ffffff;
+}
+.first-row,
+.second-row,
+.third-row,
+.fourth-row,
+.conflict
+{
+  display: inline-block;
+  width: 100%;
+}
+button:hover{
+  opacity: 0.7;
+}
+.global{
+  padding: 15px;
+  font-weight: bold;
+  font-size: 16px;
+  border: none;
+  border-radius: 3px;
+  background-color: #F2F2F2;
+  float: left;
+  width: 23.5%;
+  margin: 0 2px;
+  /*border: 1px solid #000;*/
+ }
+ .global-2{
+  padding: 15px;
+  font-weight: bold;
+  font-size: 16px;
+  border: none;
+  border-radius: 3px;
+  background-color: #f8f8f8;
+  float: left;
+  width: 48%;
+  margin: 0 2px;
+  /*border: 1px solid #000;*/
+ }
+ .global-3{
+  padding: 15px;
+  font-weight: bold;
+  font-size: 16px;
+  border: none;
+  color: aliceblue;
+  border-radius: 3px;
+  background-color: #e72a2a;
+  float: left;
+  width: 47.8%;
+  margin: 0 2px;
+  /*border: 1px solid #000;*/
+ }
+ .global-4{
+  padding: 15px;
+  font-weight: bold;
+  font-size: 16px;
+  border: none;
+  color: aliceblue;
+  border-radius: 3px;
+  background-color: #b3cf10;
+  float: left;
+  width: 48%;
+  margin: 0 2px;
+  /*border: 1px solid #000;*/
+ }
 
-@media (prefers-reduced-motion: no-preference) {
-  .App-logo {
-    animation: App-logo-spin infinite 20s linear;
+ .equa{
+    padding: 15px;
+    width: 90%;
+    background-color: black;
+    color: white;
+    margin: 2px 2px;
+    border-radius: 3px;
+ }
+
+ /* reponsive */
+ @media only screen and (max-width: 1121px) {
+  .container{
+   width: 80%;
   }
-}
-
-.App-header {
-  background-color: #282c34;
-  min-height: 100vh;
-  display: flex;
-  flex-direction: column;
-  align-items: center;
-  justify-content: center;
-  font-size: calc(10px + 2vmin);
-  color: white;
-}
-
-.App-link {
-  color: #61dafb;
-}
-
-@keyframes App-logo-spin {
-  from {
-    transform: rotate(0deg);
+  .equa{
+    width: 92% ;
   }
-  to {
-    transform: rotate(360deg);
+  .global{
+    width: 23.6%;
   }
+  .global-2{
+    width: 47.8%;
+  }
+  .global-3{
+    width: 47.7%;
+  }
+  .global-4{
+    width: 47.7%;
+  }
+  #dis { font-size: 12vw; }
+  #eq { font-size: 4vw; }
 }
+
+ /* @media only screen and (max-width: 1024px) {
+  .container{
+   width: 80%;
+  }
+  .equa{
+    width: 92% ;
+  }
+  .global{
+    width: 23.6%;
+  }
+  .global-2{
+    width: 47.8%;
+  }
+  .global-3{
+    width: 47.7%;
+  }
+  .global-4{
+    width: 47.7%;
+  }
+  #dis { font-size: 12vw; }
+  #eq { font-size: 4vw; }
+} */
+
+ 
+  @media only screen and (max-width: 768px) {
+    .container{
+     width: 80%;
+    }
+    .equa{
+      width: 91% ;
+    }
+    .global{
+      width: 23.5%;
+    }
+    .global-2{
+      width: 47.8%;
+    }
+    .global-3{
+      width: 47.7%;
+    }
+    .global-4{
+      width: 47.7%;
+    }
+    #dis { font-size: 12vw; }
+    #eq { font-size: 4vw; }
+  }
+  @media only screen and (max-width: 540px) {
+    .container{
+     width: 80%;
+    }
+    .equa{
+      width: 89% ;
+    }
+    .global{
+      width: 23.4%;
+    }
+    .global-2{
+      width: 47.8%;
+    }
+    .global-3{
+      width: 47.7%;
+    }
+    .global-4{
+      width: 47.7%;
+    }
+    #dis { font-size: 12vw; }
+    #eq { font-size: 4vw; }
+  }
+  @media only screen and (max-width: 375px) {
+    .container{
+      margin: auto;
+      width: 50%;
+    }
+    .equa{
+      width: 81%;
+    }
+    .global{
+      width: 22.7%;
+     }
+     .global-2{
+      width: 47.8%;
+     }
+     .global-3{
+      width: 47.7%;
+     }
+     .global-4{
+      width: 47.7%;
+     }
+  
+    #dis { font-size: 12vw; }
+    #eq { font-size: 4vw; }
+    }
+  
+   
+  
