@@ -14,14 +14,15 @@ function App(){
     // empty equation
     if(equation === "")
     {
-      //value input is '.' then set state specify
-      if(e.target.value ==="."){
-        setEquation(equation + "0.")
-        setDisplay("0.")
-      }
-      else{
-        setEquation(e.target.value)
-        setDisplay(e.target.value)
+      if(display==="0"&& e.target.value!=="0"){
+        if(e.target.value ==="."){
+          setEquation(equation + "0.")
+          setDisplay("0.")  //value input is '.' then set state specify 
+        }
+        else{
+          setEquation(e.target.value)
+          setDisplay(e.target.value)
+        }
       }
     }
     if(!equation.includes("="))
@@ -61,12 +62,18 @@ function App(){
           }
         }
     }else{
-      if(e.target.value ==="."){
-        setEquation( "0.")
-        setDisplay("0.")
-      }else{
-        setEquation( e.target.value)
-        setDisplay( e.target.value)  
+      if(e.target.value!=="0"){
+        if(e.target.value ==="."){
+          setEquation( "0.")
+          setDisplay("0.")
+        }else{
+          setEquation( e.target.value)
+          setDisplay( e.target.value)  
+        }
+      }
+      else{
+        setDisplay("0")
+        setEquation("")
       }
     }
   }
@@ -93,8 +100,14 @@ function App(){
     if(!equation.includes("=") && equation !== ""){
       if(equation!=="" && equation.match(/[+\-*\/]$/) ===null && equation.match(/[+\-*\/]/)!==null){
         let result = eval(equation)
-        setEquation(`${equation} = ${result}`)
-        setDisplay(result.toString())
+        if(result.toString().match(/[a-z]/)!==null){
+          setEquation("")
+          setDisplay(result.toString())
+        }
+        else{
+          setEquation(`${equation} = ${result}`)
+          setDisplay(result.toString())
+        }
       }
       console.log(equation)
     }
